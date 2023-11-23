@@ -1,9 +1,7 @@
-Import time
-# Start the timer
-start_time = time.time()
-# Loop from 1 to 100,000
-for number in range(1, 100001):
- # Calculate the elapsed time
- elapsed_time = time.time() - start_time
- # Print the current number and the elapsed time
- print(f"Number: {number}, Elapsed Time: {elapsed_time:.2f} seconds")
+# Abrir un archivo en modo de escritura
+with open('numeros.txt', 'w') as archivo:
+    # Escribir los números del 1 al 100,000 en el archivo
+    for numero in range(1, 100001):
+        archivo.write(str(numero) + '\n')
+
+print("Archivo creado exitosamente.")
